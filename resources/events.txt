@@ -1,0 +1,50 @@
+#Event (ID, heading, text, nrOfChoices, debugTxt, effect, picName, war
+#		notes: effect has to be in list of effects,           ; is newline
+#FORMAT:
+#{ ignores line
+#ID:#NAME#
+#heading:#NAME#
+#text:#NAME#
+#debugTxt:#NAME#
+#picName:#NAME#
+#war:#Y/N#
+#choice:#NAME#
+#effect:#NAME#
+#choice:#NAME#
+#effect:#NAME#
+#} goes to constructor
+##########################
+{ gain gold
+ID:e1
+heading:Bountiful harvest
+text:This season, an exceptionally bountiful harvest boosts our coffers.
+debugTxt: What is this even for.. I am Seriously overthinking things..
+picName:default.jpg
+war:N
+choice:Great news!
+effect:gold50
+}
+##########################
+{ lose gold
+ID:e2
+heading:Poor harvest
+text:Our lands have suffered greatly this past season,;harsh weather has destroyed fields and livestock alike.
+debugTxt: Oh i know, this is for writing random crap when im bored! :D
+picName:default.jpg
+war:N
+choice:Dark times are upon us...
+effect:gold-50
+}
+##########END OF READ################
+{
+ID:
+heading:
+text:
+nrOfChoices:
+debugTxt:
+effect:
+picName:
+war:N
+}
+##########################
+

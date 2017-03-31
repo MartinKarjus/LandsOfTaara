@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/LandsOfTaara.iml" filepath="$PROJECT_DIR$/LandsOfTaara.iml" />
+      <module fileurl="file://$PROJECT_DIR$/game/game.iml" filepath="$PROJECT_DIR$/game/game.iml" />
+      <module fileurl="file://$PROJECT_DIR$/testscene/testscene.iml" filepath="$PROJECT_DIR$/testscene/testscene.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mainGame/world.iml" filepath="$PROJECT_DIR$/mainGame/world.iml" />
+    </modules>
+  </component>
+</project>
