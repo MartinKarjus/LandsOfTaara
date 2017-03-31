@@ -61,7 +61,7 @@ public class runGame {
 
     public static void AIturn (Person AI) {
         /*
-        upgrade buildings if over 100 gold and sufficient for upgrade.
+        upgrade buildings if over 100 gold and sufficient for upgrade
         find marriage partner for(prio self, prio sons, daughters to nearby good relations)
             find alliances, preferring closer
         TODO make path finder between counties
