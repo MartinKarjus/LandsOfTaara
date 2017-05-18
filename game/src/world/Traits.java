@@ -1,5 +1,7 @@
 package world;
 
+import java.time.Year;
+
 /**
  * Created by Martin Karjus 1 on 04/03/2017.
  */
@@ -15,6 +17,32 @@ public class Traits {
     private Boolean visible;
     private String opposing;
     private String icon;
+    private YearSeason expireDate;
+
+    public YearSeason getExpireDate() {
+        return expireDate;
+    }
+
+    public void setExpireDate(YearSeason expireDate) {
+        this.expireDate = expireDate;
+    }
+
+    /*
+    public boolean isExpireDate(YearSeason currentDate) {
+        if(currentDate == null) {
+            return false;
+        }
+        if(currentDate.getSeason().equals(expireDate.getSeason()) && expireDate.getYear() == currentDate.getYear()) {
+            return true;
+        }
+        return false;
+    }*/
+
+    public void setDuration(int duration, YearSeason currentDate) {
+        expireDate = currentDate;
+        expireDate.setYear(currentDate.getYear() + duration);
+    }
+
 
     public String getName() {
         return name;

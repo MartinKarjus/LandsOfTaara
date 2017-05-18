@@ -1,4 +1,0 @@
-first line
-2nd line
-
-line after empty line

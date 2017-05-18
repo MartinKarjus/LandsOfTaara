@@ -1,13 +1,15 @@
 package world;
 
-import world.County;
-import world.Event;
-import world.Traits;
-
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.URISyntaxException;
+import java.net.URL;
 import java.nio.file.Files;
+import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.*;
 import java.util.stream.Stream;
@@ -15,21 +17,114 @@ import java.util.stream.Stream;
 /**
  * Created by Martin Karjus 1 on 04/03/2017.
  */
-// ./resources/yourfile.txt
 public class readPremade {
-    // TODO add reading of portrait pictures
-    /**
-     * Use for reading firstnames(F and M) and surnames.
-     * @param fileName Name of the txt file in resource folder that needs to be read.
-     * @return List of names.
-     */
+
+
+    // This only reads a txt file for the names of the portraits
+    public static Map<String, List<String>> portraits() {
+
+        Map<String, List<String>> portraits = new HashMap<>();
+        List<String> mNames = new ArrayList<>();
+        List<String> fNames = new ArrayList<>();
+        List<String> cNames = new ArrayList<>();
+
+        InputStream in = readPremade.class.getResourceAsStream("faces.txt");
+        BufferedReader br = new BufferedReader(new InputStreamReader(in));
+
+        LinkedList<String> nameL = new LinkedList<>();
+
+        String line;
+        try {
+            while ((line = br.readLine()) != null) {
+                if (line.contains("f")) {
+                    fNames.add(line);
+                } else if (line.contains("m")) {
+                    mNames.add(line);
+                } else if (line.contains("kid")) {
+                    cNames.add(line);
+                }
+            }
+        } catch(IOException e) {
+            System.out.println("********************FAILED TO READ PORTRAITS**********************");
+        }
+        nameL.removeAll(Arrays.asList("", null));
+
+
+
+        portraits.put("F", fNames);
+        portraits.put("M", mNames);
+        portraits.put("C", cNames);
+
+        return portraits;
+    }
+
+
+    /*
+    // TODO reimplement this way incase i ever continue work on this game
+    // What this does is read a folder for names instead of reading a txt file
+    public static Map<String, List<String>> portraits() {
+
+        Map<String, List<String>> portraits = new HashMap<>();
+        List<String> mNames = new ArrayList<>();
+        List<String> fNames = new ArrayList<>();
+        List<String> cNames = new ArrayList<>();
+
+
+        File folder = new File("resources/portraits");
+        File[] fileList = folder.listFiles();
+
+
+        for (int i = 0; i < fileList.length; i++) {
+            if (fileList[i].isFile()) {
+                System.out.println(fileList[i].getName());
+                if(fileList[i].getName().contains("f")) {
+                    fNames.add(fileList[i].getName());
+                } else if (fileList[i].getName().contains("m")) {
+                    mNames.add(fileList[i].getName());
+                } else if (fileList[i].getName().contains("kid")) {
+                    cNames.add(fileList[i].getName());
+                }
+            } else if (fileList[i].isDirectory()) {
+                System.out.println("Directory found when reading portraits? name: " + fileList[i].getName());
+            }
+        }
+        portraits.put("F", fNames);
+        portraits.put("M", mNames);
+        portraits.put("C", cNames);
+
+        return portraits;
+    }
+    */
+
+
+    /*
     public static LinkedList<String> names(String fileName) {
-        fileName = "./resources/" + fileName;
+        fileName = "resources/" + fileName;
         LinkedList<String> nameL = new LinkedList<>();
         try (Stream<String> stream = Files.lines(Paths.get(fileName))) {
             stream.forEach(nameL::add);
         } catch (IOException e) {
+            System.out.println("********************FAILED TO READ NAMES**********************");
             e.printStackTrace();
+        }
+        nameL.removeAll(Arrays.asList("", null));
+        return nameL;
+    }
+    */
+
+    public static LinkedList<String> names(String fileName) {
+        InputStream in = readPremade.class.getResourceAsStream(fileName);
+        BufferedReader br = new BufferedReader(new InputStreamReader(in));
+
+        LinkedList<String> nameL = new LinkedList<>();
+
+        String line;
+        try {
+            while ((line = br.readLine()) != null) {
+                nameL.add(line);
+            }
+        } catch(IOException e) {
+            System.out.println("********************FAILED TO READ NAMES**********************");
         }
         nameL.removeAll(Arrays.asList("", null));
         return nameL;
@@ -41,10 +136,14 @@ public class readPremade {
      * @return Linked map of traits with <Name, traitID>.
      */
     public static Map<String, Traits> traits(String fileName) {
-        fileName = "./resources/" + fileName;
+        //fileName = "resources/" + fileName;
         Map<String, Traits> traits = new LinkedHashMap<String, Traits>();
 
-        try (BufferedReader br = new BufferedReader(new FileReader(fileName))) {
+        InputStream in = readPremade.class.getResourceAsStream(fileName);
+        BufferedReader br = new BufferedReader(new InputStreamReader(in));
+
+       // try (BufferedReader br = new BufferedReader(new FileReader(fileName))) {
+        try {
             String line;
 
             String name = null;
@@ -131,10 +230,14 @@ public class readPremade {
      * @return Linked map where <eventID, EventObject>
      */
     public static Map<String, Event> events(String fileName) {
-        fileName = "./resources/" + fileName;
+        //fileName = "resources/" + fileName;
         Map<String, Event> events = new LinkedHashMap<String, Event>();
 
-        try (BufferedReader br = new BufferedReader(new FileReader(fileName))) {
+        InputStream in = readPremade.class.getResourceAsStream(fileName);
+        BufferedReader br = new BufferedReader(new InputStreamReader(in));
+
+        //try (BufferedReader br = new BufferedReader(new FileReader(fileName))) {
+        try {
             String line;
 
             String ID = null;
@@ -200,16 +303,21 @@ public class readPremade {
         return events;
     }
     public static Map<String, County> counties(String fileName) {
-        fileName = "./resources/" + fileName;
+        //fileName = "resources/" + fileName;
         Map<String, County> counties = new LinkedHashMap<String, County>();
 
-        try (BufferedReader br = new BufferedReader(new FileReader(fileName))) {
+        InputStream in = readPremade.class.getResourceAsStream(fileName);
+        BufferedReader br = new BufferedReader(new InputStreamReader(in));
+
+        //try (BufferedReader br = new BufferedReader(new FileReader(fileName))) {
+        try {
             String line;
 
             String name = null;
             Integer def = 0;
             Integer troops = 0;
             Double income = 0.0;
+            String colorString = "";
             while ((line = br.readLine()) != null) {
                 /*#name:#NAME#
                 #def:#NR#
@@ -223,11 +331,12 @@ public class readPremade {
                     continue;
                 }
                 if(line.contains("}")) {
-                    counties.put(name, new County(name, def, troops, income));
+                    counties.put(name, new County(name, def, troops, income, colorString));
                     name = null;
                     def = 0;
                     troops = 0;
                     income = 0.0;
+                    colorString = "";
                 }
                 if(line.contains("name:")) {
                     name = line.substring(line.indexOf(":") + 1);
@@ -244,7 +353,12 @@ public class readPremade {
                 if(line.contains("connected:")) {
                     String[] con = line.substring(line.indexOf(":") + 1).split("&");
                     counties.get(con[0]).addCon(counties.get(con[1]));
+                    counties.get(con[1]).addCon(counties.get(con[0]));
                 }
+                if(line.contains("color:")) {
+                    colorString = line.substring(line.indexOf(":") + 1);
+                }
+
             }
 
         } catch (IOException e) {
@@ -253,6 +367,15 @@ public class readPremade {
         return counties;
     }
     public static void main(String args[]) {
+
+        /*
+        Map<String, List<String>> a = portraits();
+        System.out.println(a.get("F"));
+        System.out.println(a.get("M"));
+        System.out.println(a.get("C"));
+        */
+
+
         //List<String> testL = names("readingpremade/src/testcase.txt");
         //List<String> testL = traits("testcase.txt");
         /*
@@ -284,13 +407,4 @@ public class readPremade {
           //  System.out.println(testL.get(x));
         //}
     }
-    /*
-    Map<String, TstC> mappy = new LinkedHashMap<String, TstC>();
-        mappy.put("bla", new TstC("meh"));
-        mappy.put("trolololo", new TstC("mehlet"));
-        for (String key : mappy.keySet()) {
-            System.out.println(key + mappy.get(key));
-        }
-        System.out.println(mappy);
-     */
 }
