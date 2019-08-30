@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<GridPane fx:id="basePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="450.0" styleClass="bg" stylesheets="@subMenu.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="menuSubMenu.subMenuController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="20.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="20.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="20.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="20.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Circle fx:id="personCircle" fill="DODGERBLUE" onMouseClicked="#personClick" radius="22.0" stroke="BLACK" strokeType="INSIDE" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+      <Circle fx:id="plotCircle" fill="DODGERBLUE" onMouseClicked="#plotClick" radius="22.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+      <Circle fx:id="warCircle" fill="DODGERBLUE" onMouseClicked="#warClick" radius="22.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+      <Circle fx:id="lawCircle" fill="DODGERBLUE" onMouseClicked="#lawClick" radius="22.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+      <Label fx:id="moneyLbl" alignment="CENTER" contentDisplay="CENTER" ellipsisString="" text="moneyLbl" textAlignment="CENTER" textOverrun="WORD_ELLIPSIS" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+         <font>
+            <Font name="Bell MT Bold" size="25.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <textFill>
+            <LinearGradient endX="0.7761904761904762" endY="1.0" startX="0.7761904761904762" startY="0.4714285714285713">
+               <stops>
+                  <Stop color="#e44739" />
+                  <Stop color="#c6a6a6" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+   </children>
+</GridPane>

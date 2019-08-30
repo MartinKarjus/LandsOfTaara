@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/LandsOfTaara.iml" filepath="$PROJECT_DIR$/LandsOfTaara.iml" />
       <module fileurl="file://$PROJECT_DIR$/game/game.iml" filepath="$PROJECT_DIR$/game/game.iml" />
+      <module fileurl="file://$PROJECT_DIR$/out/production/game/game1.iml" filepath="$PROJECT_DIR$/out/production/game/game1.iml" />
     </modules>
   </component>
 </project>

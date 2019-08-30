@@ -1,0 +1,14 @@
+##### this file wont be read, these are names of the functions that can be used for events and formats they should be in
+#example: loseGold100
+#gold#NR#
+#troops#NR#
+#troopsExtra#NR#
+#gainTrait#NAME#
+#loseTraint#NAME#
+#call#EVENTNAME#
+gold
+troops
+troopsExtra
+gainTrait
+loseTraint
+call

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#escPress" prefHeight="490.0" prefWidth="600.0" spacing="5.0" styleClass="backG" stylesheets="@summary.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="summaryScreen.summaryController">
+   <children>
+      <GridPane alignment="CENTER" prefHeight="298.0" prefWidth="560.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="187.0" GridPane.columnIndex="1">
+               <children>
+                  <Label fx:id="yearLbl" alignment="CENTER" contentDisplay="CENTER" ellipsisString="" text="yearLbl" textAlignment="CENTER" textOverrun="WORD_ELLIPSIS">
+                     <font>
+                        <Font name="Bell MT Bold" size="35.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <textFill>
+                        <LinearGradient endX="0.7761904761904762" endY="1.0" startX="0.7761904761904762" startY="0.4714285714285713">
+                           <stops>
+                              <Stop color="#e44739" />
+                              <Stop color="#c6a6a6" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                  </Label>
+                  <Label fx:id="seasonLbl" alignment="CENTER" contentDisplay="CENTER" ellipsisString="" text="seasonLbl" textAlignment="CENTER" textOverrun="WORD_ELLIPSIS">
+                     <font>
+                        <Font name="Bell MT Bold" size="25.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <textFill>
+                        <LinearGradient endX="0.7761904761904762" endY="1.0" startX="0.7761904761904762" startY="0.4714285714285713">
+                           <stops>
+                              <Stop color="#e44739" />
+                              <Stop color="#c6a6a6" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                  </Label>
+                  <Circle fx:id="selfCircle" fill="DODGERBLUE" radius="40.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Label fx:id="nameLbl" alignment="CENTER" contentDisplay="CENTER" ellipsisString="" text="name" textAlignment="CENTER" textOverrun="WORD_ELLIPSIS">
+                     <font>
+                        <Font name="Bell MT Bold" size="25.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <textFill>
+                        <LinearGradient endX="0.7761904761904762" endY="1.0" startX="0.7761904761904762" startY="0.4714285714285713">
+                           <stops>
+                              <Stop color="#e44739" />
+                              <Stop color="#c6a6a6" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" ellipsisString="" text="Ruler of" textAlignment="CENTER" textOverrun="WORD_ELLIPSIS">
+                     <font>
+                        <Font name="Bell MT Bold" size="25.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <textFill>
+                        <LinearGradient endX="0.7761904761904762" endY="1.0" startX="0.7761904761904762" startY="0.4714285714285713">
+                           <stops>
+                              <Stop color="#e44739" />
+                              <Stop color="#c6a6a6" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                  </Label>
+                  <Label fx:id="capitalLbl" alignment="CENTER" contentDisplay="CENTER" ellipsisString="" text="capital" textAlignment="CENTER" textOverrun="WORD_ELLIPSIS">
+                     <font>
+                        <Font name="Bell MT Bold" size="25.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <textFill>
+                        <LinearGradient endX="0.7761904761904762" endY="1.0" startX="0.7761904761904762" startY="0.4714285714285713">
+                           <stops>
+                              <Stop color="#e44739" />
+                              <Stop color="#c6a6a6" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox fx:id="warBox" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" ellipsisString="" text="Wars:" textAlignment="CENTER" textOverrun="WORD_ELLIPSIS">
+                     <font>
+                        <Font name="Bell MT Bold" size="25.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <textFill>
+                        <LinearGradient endX="0.7761904761904762" endY="1.0" startX="0.7761904761904762" startY="0.4714285714285713">
+                           <stops>
+                              <Stop color="#e44739" />
+                              <Stop color="#c6a6a6" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                  </Label>
+               </children>
+            </VBox>
+         </children>
+      </GridPane>
+      <GridPane prefHeight="140.0" prefWidth="560.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="274.0" minWidth="10.0" prefWidth="170.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="482.0" minWidth="10.0" prefWidth="390.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label fx:id="eventNameLbl" alignment="CENTER" contentDisplay="CENTER" ellipsisString="" text="eventName" textAlignment="CENTER" textOverrun="WORD_ELLIPSIS">
+               <font>
+                  <Font name="Bell MT Bold" size="20.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <textFill>
+                  <LinearGradient endX="0.7761904761904762" endY="1.0" startX="0.7761904761904762" startY="0.4714285714285713">
+                     <stops>
+                        <Stop color="#e44739" />
+                        <Stop color="#c6a6a6" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+            <TextArea fx:id="eventText" blendMode="OVERLAY" editable="false" prefHeight="200.0" prefWidth="390.0" GridPane.columnIndex="1" />
+         </children>
+      </GridPane>
+      <Button mnemonicParsing="false" onAction="#closeBtn" styleClass="backG" stylesheets="@summary.css" text="Close" />
+   </children>
+</VBox>

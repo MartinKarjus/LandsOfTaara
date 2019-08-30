@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane fx:id="editorWindow" prefHeight="500.0" prefWidth="700.0" styleClass="backG" stylesheets="@traitBtn.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="editors.traitController">
+   <children>
+      <GridPane layoutX="35.0" layoutY="78.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="376.0" prefWidth="369.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="328.0" minWidth="10.0" prefWidth="166.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="574.0" minWidth="10.0" prefWidth="203.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Text fill="#d7d7d7" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Text fill="#d7d7d7" strokeType="OUTSIDE" strokeWidth="0.0" text="Agressive Bonus(int)" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Text fill="#d7d7d7" strokeType="OUTSIDE" strokeWidth="0.0" text="Troop bonus(%)(int)" GridPane.rowIndex="3">
+               <font>
+                  <Font size="15.0" />
+               </font></Text>
+            <Text fill="#d7d7d7" strokeType="OUTSIDE" strokeWidth="0.0" text="Luck bonus(int)" GridPane.rowIndex="4">
+               <font>
+                  <Font size="15.0" />
+               </font></Text>
+            <Text fill="#d7d7d7" strokeType="OUTSIDE" strokeWidth="0.0" text="Lust bonus(int)" GridPane.rowIndex="5">
+               <font>
+                  <Font size="15.0" />
+               </font></Text>
+            <Text fill="#d7d7d7" strokeType="OUTSIDE" strokeWidth="0.0" text="Ambition bonus(int)" GridPane.rowIndex="6">
+               <font>
+                  <Font size="15.0" />
+               </font></Text>
+            <Text fill="#d7d7d7" strokeType="OUTSIDE" strokeWidth="0.0" text="Justice bonus(int)" GridPane.rowIndex="7">
+               <font>
+                  <Font size="15.0" />
+               </font></Text>
+            <Text fill="#d7d7d7" strokeType="OUTSIDE" strokeWidth="0.0" text="Visible" GridPane.rowIndex="8">
+               <font>
+                  <Font size="15.0" />
+               </font></Text>
+            <Text fill="#d7d7d7" strokeType="OUTSIDE" strokeWidth="0.0" text="Opposing trait name" GridPane.rowIndex="9">
+               <font>
+                  <Font size="15.0" />
+               </font></Text>
+            <Text fill="#d7d7d7" strokeType="OUTSIDE" strokeWidth="0.0" text="Icon name" GridPane.rowIndex="10">
+               <font>
+                  <Font size="15.0" />
+               </font></Text>
+            <TextField fx:id="nameTf" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="aggressiveTf" text="0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="troopBTf" text="0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="luckBTf" text="0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextField fx:id="lustBTf" text="0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <TextField fx:id="ambitionBTf" text="0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <TextField fx:id="justiceBTf" text="0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <TextField fx:id="opposingTf" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+            <TextField fx:id="iconTf" promptText="default.jpg" text="default.jpg" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+            <CheckBox fx:id="visibleT" mnemonicParsing="false" selected="true" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+            <Text fill="#d7d7d7" strokeType="OUTSIDE" strokeWidth="0.0" text="War Bonus(int)">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <TextField fx:id="warBTf" text="0" GridPane.columnIndex="1" />
+         </children>
+      </GridPane>
+      <Text layoutX="260.0" layoutY="36.0" scaleX="4.0" scaleY="4.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Trait editor" wrappingWidth="149.13671875" />
+      <Button fx:id="saveCreated" layoutX="478.0" layoutY="461.0" mnemonicParsing="false" onAction="#saveAction" styleClass="btn" stylesheets="@traitBtn.css" text="Add created traits" />
+      <Button fx:id="addTraitBtn" layoutX="411.0" layoutY="461.0" mnemonicParsing="false" onAction="#addAction" styleClass="btn" stylesheets="@traitBtn.css" text="Add trait" />
+      <Button fx:id="exitEditor" layoutX="616.0" layoutY="461.0" mnemonicParsing="false" onAction="#exitAction" styleClass="btn" stylesheets="@traitBtn.css" text="Exit editor" />
+      <Label fx:id="errorLabel" layoutX="222.0" layoutY="465.0" prefHeight="17.0" prefWidth="163.0" style="-fx-font-size: 15;" text="Have fun creating traits!" textFill="#e30202" />
+      <Button fx:id="removeLast" layoutX="411.0" layoutY="429.0" mnemonicParsing="false" onAction="#removeAction" styleClass="btn" stylesheets="@traitBtn.css" text="Remove last trait" />
+      <Text layoutX="425.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Last trait:">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Text>
+      <Label fx:id="lastTraitLabel" layoutX="463.0" layoutY="84.0" style="-fx-font-size: 15;" text="None">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

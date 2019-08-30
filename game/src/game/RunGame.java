@@ -22,11 +22,12 @@ public class RunGame {
     /** Road probably ran into infinite loop(maybe invalid connections initialized?). */
     public static final int TOO_LONG_ROAD = 1000;
 
-    public static final int EVENT_CHANCE = 50;
+
 
     /** Set to true if testing is in progress, used in some functions to skip stuff that needs generated world.*/
     private boolean testing = false;// DO CHANGE THIS IF YOU DONT KNOW EXACTLY WHAT FUNCTIONS GET CHANGED AND HOW
 
+    public static final int EVENT_CHANCE = 20; // currently only 2 events, 1 for +50 gold, other for -50
 
     // All random values are taken from 0 to 99
     // OLD_DEATH_CHANCE = 20 means that every person over or at 40, younger than 60 has 21% chance to die
